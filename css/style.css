@@ -1,0 +1,176 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  line-height: 1.42;
+  font-size: 16px;
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  /* to smooth fonts */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: bisque;
+
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  width: 100%;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.section__top {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+#form {
+  height: 180px;
+  background-color: #e4bdd2;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  box-shadow: 0px 5px 20px 0px palevioletred;
+}
+
+.form__field {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.hello-title {
+  position: absolute;
+  top: 17px;
+  left: 60px;
+  background-color: darksalmon;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.hello-title__second {
+  position: absolute;
+  top: 17px;
+  right: 90px;
+  background-color: darksalmon;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.main-title {
+  text-align: center;
+}
+
+.input {
+  width: 40%;
+  border-radius: 5px;
+  padding: 5px 5% 5px 5%;
+  outline: none;
+}
+
+.btn {
+  padding: 5px 0px;
+  border-radius: 5px;
+  min-width: 90px;
+  text-align: center;
+
+  color: black;
+}
+
+.btn__generate {
+  background-color: #93ed94;
+  margin-left: 30px;
+}
+
+.btn__stop {
+  background-color: #e66052;
+  margin-left: 10px;
+}
+
+.btn__copy {
+  background-color: lightgray;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: darkslategrey;
+  text-align: center;
+}
+
+.section__bottom {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.hexa__list {
+  margin-bottom: 20px;
+}
+
+.hexa__item {
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 100px;
+}
+
+.hexa__item:first-child {
+  border-radius: 10px 10px 0px 0px !important;
+}
+
+.hexa__item:last-child {
+  border-radius: 0px 0px 10px 10px !important;
+}
+
+.hexa__number {
+  font-weight: bold;
+  font-size: 19px;
+}
