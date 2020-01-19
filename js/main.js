@@ -1,35 +1,34 @@
-
-// to display greeting
-let sayHello = () => {
-  let helloTitle;
-  setTimeout(() => {
-    helloTitle = document.createElement('h3');
-    helloTitle.setAttribute('class', 'hello-title');
-    helloTitle.textContent = 'Hello! Let`s go to generate!!!';
-
-    form.appendChild(helloTitle);
-
-  }, 1500);
-
-  setTimeout(() => {
-    form.removeChild(helloTitle)
-  }, 4000);
-
-  setTimeout(() => {
-    helloTitle = document.createElement('h3');
-    helloTitle.setAttribute('class', 'hello-title__second');
-    helloTitle.textContent = 'Do not be shy :)';
-
-    form.appendChild(helloTitle);
-
-  }, 4500);
-
-  setTimeout(() => {
-    form.removeChild(helloTitle)
-  }, 6500);
-};
-
-sayHello();
+// // to display greeting
+// let sayHello = () => {
+//   let helloTitle;
+//   setTimeout(() => {
+//     helloTitle = document.createElement('h3');
+//     helloTitle.setAttribute('class', 'hello-title');
+//     helloTitle.textContent = 'Hello! Let`s go to generate!!!';
+//
+//     form.appendChild(helloTitle);
+//
+//   }, 1500);
+//
+//   setTimeout(() => {
+//     form.removeChild(helloTitle)
+//   }, 4000);
+//
+//   setTimeout(() => {
+//     helloTitle = document.createElement('h3');
+//     helloTitle.setAttribute('class', 'hello-title__second');
+//     helloTitle.textContent = 'Do not be shy :)';
+//
+//     form.appendChild(helloTitle);
+//
+//   }, 4500);
+//
+//   setTimeout(() => {
+//     form.removeChild(helloTitle)
+//   }, 6500);
+// };
+//
+// sayHello();
 
 //function to copy rgb color
 let copyColor = (str) => {
@@ -64,7 +63,6 @@ let hexaColor = () => {
 };
 
 
-
 let body = document.body;
 let form = document.querySelector('#form');
 
@@ -73,7 +71,7 @@ input.setAttribute('class', 'input');
 input.setAttribute('name', 'number')
 input.setAttribute('class', 'input');
 input.setAttribute('name', 'number');
-input.setAttribute('placeholder', 'Enter the number greater than 5...');
+input.setAttribute('placeholder', 'Enter the number...');
 
 let ul = document.querySelector('.hexa__list');
 
@@ -110,7 +108,7 @@ div.appendChild(btnStop);
 
 //default loop to create 5 elements
 
-let loop = (n) => {
+let loop1 = (n) => {
   for (let i = 0; i < n; i++) {
 
     let li = document.createElement('li');
@@ -123,6 +121,8 @@ let loop = (n) => {
     btnCopy.setAttribute('href', '#');
     btnCopy.textContent = 'Copy';
     btnCopy.setAttribute('class', 'btn btn__copy');
+
+    let testLi = document.querySelectorAll('.test')
 
     //to merge text rgb with background rgb colors
     let contentItemColor = () => {
@@ -155,52 +155,33 @@ let loop = (n) => {
       copyColor(hexaNumber.textContent);
     });
 
-    let together = () => {
-      li.addEventListener('mouseover', () => {
-        clearInterval(startInterval);
-        // li.style.margin = '5px';
-        // li.style.borderRadius = '5px';
-        // li.style.boxShadow = '2px 2px 20px 2px black';
+    let getColor;
 
-        btnCopy.addEventListener('mouseover', () => {
-          clearInterval(startInterval);
-          // li.style.margin = '5px';
-          // li.style.borderRadius = '5px';
-          // li.style.boxShadow = '2px 2px 20px 2px black';
-        });
-      })
-
-
-    };
-    together();
-
-
-    //to onmouseover and hold content
+    //to mouseover and hold content
     li.addEventListener('mouseover', () => {
       clearInterval(startInterval);
-      // li.style.margin = '5px';
-      // li.style.borderRadius = '5px';
-      // li.style.boxShadow = '2px 2px 20px 2px black';
+      getColor = hexaNumber.textContent;
+      console.log(getColor);
     });
 
 
-    //to onmouseout to continue interval
+    //to mouseout to continue interval
     li.addEventListener('mouseout', () => {
-      // li.style.margin = '0px';
-      // li.style.borderRadius = '0';
-      // li.style.boxShadow = 'none'
 
-      toCleanChildren(5);
-      loop(5);
+
+
+
+      toCleanChildren(n);
+      loop1(n);
+      console.log(getColor);
 
 
     });
-
 
   }
 };
 
-loop(5);
+loop1(5);
 
 
 //click to create ... element(s)
@@ -273,8 +254,8 @@ btnGenerate.addEventListener('click', () => {
       // li.style.borderRadius = '0';
       // li.style.boxShadow = 'none'
 
-      toCleanChildren(5);
-      loop(inputValue);
+      toCleanChildren(inputValue);
+      loop1(inputValue);
 
     });
 
